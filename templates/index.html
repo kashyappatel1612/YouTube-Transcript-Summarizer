@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summify - YouTube AI Summarizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <header class="glass-header">
+        <div class="logo">
+            <i class="ph ph-sparkle"></i>
+            <span>Summify</span>
+        </div>
+        <button id="settingsBtn" class="icon-btn" aria-label="Settings">
+            <i class="ph ph-gear"></i>
+        </button>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Turn long videos into <span class="gradient-text">smart insights</span></h1>
+            <p>Paste a YouTube link below and let our AI generate a comprehensive summary in seconds. Translate to any language seamlessly.</p>
+        </section>
+
+        <section class="input-section glass-card">
+            <div class="input-wrapper">
+                <i class="ph ph-youtube-logo youtube-icon"></i>
+                <input type="url" id="urlInput" placeholder="https://www.youtube.com/watch?v=..." autocomplete="off">
+                <button id="summarizeBtn" class="primary-btn">
+                    <span class="btn-text">Summarize</span>
+                    <i class="ph ph-arrow-right"></i>
+                </button>
+            </div>
+            <div id="loadingIndicator" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Analyzing video content...</p>
+            </div>
+            <div id="errorMsg" class="error-msg hidden"></div>
+        </section>
+
+        <section id="resultsSection" class="results-section hidden">
+            <!-- Summary Card -->
+            <div class="glass-card result-card">
+                <div class="card-header">
+                    <h2><i class="ph ph-file-text"></i> Video Summary</h2>
+                </div>
+                <div id="summaryContent" class="markdown-content"></div>
+                
+                <div class="actions-row">
+                    <div class="language-selector">
+                        <i class="ph ph-translate"></i>
+                        <select id="languageSelect">
+                            <option value="Spanish">Spanish</option>
+                            <option value="French">French</option>
+                            <option value="German">German</option>
+                            <option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="Korean">Korean</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Arabic">Arabic</option>
+                            <option value="Russian">Russian</option>
+                            <option value="Portuguese">Portuguese</option>
+                            <option value="Italian">Italian</option>
+                        </select>
+                    </div>
+                    <button id="translateBtn" class="secondary-btn">
+                        <i class="ph ph-magic-wand"></i>
+                        <span>Translate</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Translation Card (Hidden initially) -->
+            <div id="translationCard" class="glass-card result-card hidden">
+                <div class="card-header">
+                    <h2><i class="ph ph-globe-hemisphere-west"></i> Translation (<span id="translatedLangLabel"></span>)</h2>
+                </div>
+                <div id="translationLoading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Translating...</p>
+                </div>
+                <div id="translationContent" class="markdown-content"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="glass-card modal-content">
+            <div class="modal-header">
+                <h3><i class="ph ph-key"></i> API Configuration</h3>
+                <button id="closeModalBtn" class="icon-btn"><i class="ph ph-x"></i></button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-text">To use Summify, you need a Gemini API key. You can get one for free from Google AI Studio.</p>
+                <div class="input-group">
+                    <label for="apiKeyInput">Gemini API Key</label>
+                    <input type="password" id="apiKeyInput" placeholder="AIzaSy...">
+                </div>
+                <button id="saveApiBtn" class="primary-btn full-width">Save Key</button>
+                <div id="apiStatusMessage" class="status-msg hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.APP_CONFIG = {
+            apiKeySet: {{ 'true' if api_key_set else 'false' }}
+        };
+    </script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
