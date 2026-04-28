@@ -125,14 +125,3 @@ If you like this project:
 - LinkedIn: (https://www.linkedin.com/in/kashyap-patel-710a9325a?utm_source=share_via&utm_content=profile&utm_medium=member_android)  
 
 ---
-
-# 🔥 Final Tips
-
-✔ Replace:
-- `kashyappatel1612` with your GitHub username  
-- Screenshot file names correctly (`1.png`, `2.png`)  
-
-✔ Keep repo public  
-✔ Pin this repo on your profile  
-
----
