@@ -18,7 +18,7 @@ Summify is a modern **AI-powered web application** that converts YouTube videos 
 ## 📸 Application Screenshots
 
 ### 🔹 Input Interface
-![Input UI](screenshot/input.png)
+![Input UI](screenshot/1.png)
 
 - Paste YouTube URL  
 - Click **Summarize**  
@@ -27,7 +27,7 @@ Summify is a modern **AI-powered web application** that converts YouTube videos 
 ---
 
 ### 🔹 Summary Output
-![Output UI](screenshot/output.png)
+![Output UI](screenshot/2.png)
 
 - Displays structured summary  
 - Highlights key insights  
