@@ -36,3 +36,29 @@ Summify is a modern **AI-powered web application** that converts YouTube videos 
 ---
 
 ## ⚙️ How It Works
+
+---
+
+## 🧠 Key Features
+
+- 🎥 Automatic Transcript Extraction  
+- 🤖 AI-Based Summarization  
+- ⚡ Fast Processing  
+- 🌐 User-Friendly Interface  
+- 📄 Supports Long Videos  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** Python (Flask)  
+- **Libraries:**
+  - youtube-transcript-api  
+  - NLP (NLTK / Transformers)  
+- **Environment:** dotenv  
+
+---
+
+## 📂 Project Structure
+
