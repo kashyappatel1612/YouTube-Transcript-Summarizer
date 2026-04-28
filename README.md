@@ -129,8 +129,8 @@ If you like this project:
 # 🔥 Final Tips
 
 ✔ Replace:
-- `your-username` with your GitHub username  
-- Screenshot file names correctly (`input.png`, `output.png`)  
+- `kashyappatel1612` with your GitHub username  
+- Screenshot file names correctly (`1.png`, `2.png`)  
 
 ✔ Keep repo public  
 ✔ Pin this repo on your profile  
