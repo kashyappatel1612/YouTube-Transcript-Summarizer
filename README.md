@@ -121,8 +121,8 @@ If you like this project:
 
 ## 📬 Contact
 
-- Email: your-email@gmail.com  
-- LinkedIn: your-link  
+- Email: kashyappatel1612@gmail.com  
+- LinkedIn: (https://www.linkedin.com/in/kashyap-patel-710a9325a?utm_source=share_via&utm_content=profile&utm_medium=member_android)  
 
 ---
 
