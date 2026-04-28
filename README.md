@@ -36,6 +36,11 @@ Summify is a modern **AI-powered web application** that converts YouTube videos 
 ---
 
 ## ⚙️ How It Works
+1 User enters YouTube video URL
+2 Backend fetches transcript using API
+3 Text is cleaned and preprocessed
+4 NLP model generates summary
+5 Summary is displayed on UI
 
 ---
 
@@ -61,4 +66,73 @@ Summify is a modern **AI-powered web application** that converts YouTube videos 
 ---
 
 ## 📂 Project Structure
+Youtube-Video-Summaire/
+│── screenshot/
+│── static/
+│── templates/
+│── README.md
+│── app.py
+│── requirements.txt
+│── test_ydl.py
 
+
+---
+
+## 💡 Use Cases
+
+- 📚 Students summarizing lectures  
+- 🎧 Podcasts & interviews  
+- ⏱️ Save time on long videos  
+- 📊 Quick research  
+
+---
+
+## 📊 Example Output
+
+> This tool extracts the transcript of a YouTube video and generates a concise summary highlighting key discussion points.
+
+---
+
+## 🚧 Future Enhancements
+
+- 🌍 Multi-language support  
+- 🤖 Advanced AI (GPT-based summarization)  
+- ☁️ Cloud deployment  
+- 📱 Mobile-friendly UI  
+- 🔍 Keyword extraction  
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+Fork the repo and submit a pull request.
+
+---
+
+## ⭐ Support
+
+If you like this project:
+- Give it a ⭐ on GitHub  
+- Share with others  
+- Provide feedback  
+
+---
+
+## 📬 Contact
+
+- Email: your-email@gmail.com  
+- LinkedIn: your-link  
+
+---
+
+# 🔥 Final Tips
+
+✔ Replace:
+- `your-username` with your GitHub username  
+- Screenshot file names correctly (`input.png`, `output.png`)  
+
+✔ Keep repo public  
+✔ Pin this repo on your profile  
+
+---
